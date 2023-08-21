@@ -8,8 +8,7 @@ import Alert from './components/Alert';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 function App() {
   const [mode, setMode] = useState('light'); //whether dark mode is enabled or not
@@ -56,10 +55,10 @@ function App() {
         <div className="container my-3">
           <Switch>
             <Route exact path="/about">
-              <About />
+              <About  mode={mode} showAlert={showAlert}/>
             </Route>
             <Route exact  path="/">
-              <TextForm heading="Enter the text to analyze below " mode={mode} showAlert={showAlert} />
+              <TextForm heading=" Try TextUtils - Word Counter, Character Counter, Remove extra spaces" mode={mode} showAlert={showAlert} />
             </Route>
           </Switch>
         </div>
