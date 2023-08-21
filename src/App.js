@@ -5,11 +5,13 @@ import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
+import PreLoader from './components/PreLoader';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
+
 function App() {
   const [mode, setMode] = useState('light'); //whether dark mode is enabled or not
   const [btnText, setBtnText] = useState('Enable Dark Mode')
@@ -49,6 +51,7 @@ function App() {
   }
   return (
     <>
+    <PreLoader/>
       <Router>
         <Navbar title="TextUtils" about="AboutUtils" mode={mode} toggleMode={toggleMode} btnText={btnText} toggleMode1={toggleMode1} />
         <Alert alert={alert} />

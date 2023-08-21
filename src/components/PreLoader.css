@@ -1,0 +1,37 @@
+.preloader{
+    height: 100vh;
+    width:100%;
+    background: #000;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    text-align: center;
+}
+
+.preloader .texts-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 280px;
+    font-size: 20px;
+    font-weight: 800;
+    overflow: hidden;
+    color: #fff;
+}
+.logo {
+    width: 200px; /* Adjust the width of the logo */
+    height: 200px; /* Adjust the height of the logo */
+    background-image: url('Logo1.png'); /* Replace with your logo image filename */
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px; /* Add space between the logo and the first line */
+}
