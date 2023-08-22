@@ -1,20 +1,9 @@
-.dot1, .dot2, .dot3, .dot4  {
+.dot1, .dot2, .dot3, .dot4 {
     height: 25px;
     width: 25px;
     border-radius: 50%;
     border: 1px solid black;
     display: inline-block;
     margin: 0 5px 0 5px;
-}
-.dot1{
-    background-color: #827b63;
-}
-.dot2{
-    background-color: #3d4c63;
-}
-.dot3{
-    background-color: #9ed9c5;
-}
-.dot4{
-    background-color: #e08794;
+    cursor: pointer;
 }

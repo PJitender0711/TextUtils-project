@@ -19,18 +19,14 @@ export default function Navbar(props) {
               <Link className="nav-link" to="/about">{props.about}</Link>
             </li>
           </ul>
-          {/* <form className="d-flex" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success" type="submit">Search</button>
-          </form> */}
-          <div>
-            <span className="dot1" onClick={props.toggleMode1}></span>
-            <span className="dot2"></span>
-            <span className="dot3"></span>
-            <span className="dot4"></span>
-          </div>
+          {/* <div>
+            <span className="dot1 bg-primary" onClick={()=>{props.toggleMode('info')}}></span>
+            <span className="dot2 bg-danger" onClick={()=>{props.toggleMode('danger')}}></span>
+            <span className="dot3 bg-success" onClick={()=>{props.toggleMode('success')}}></span>
+            <span className="dot4 bg-warning" onClick={()=>{props.toggleMode('warning')}}></span>
+          </div> */}
           <div className={`form-check form-switch mx-3 text-${props.mode === 'light'?'dark':'light'}`}>
-            <input className="form-check-input dot5" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+            <input className="form-check-input dot5" onClick={()=>{props.toggleMode(null)}} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.btnText}</label>
           </div>
         </div>

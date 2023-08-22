@@ -26,7 +26,17 @@ function App() {
       setAlert(null);
     }, 1500)
   }
-  const toggleMode = () => {
+  const removeBodyClasses = ()=>{
+    document.body.classList.remove('bg-info')
+    document.body.classList.remove('bg-success')
+    document.body.classList.remove('bg-danger')
+    document.body.classList.remove('bg-warning')
+    document.body.classList.remove('bg-light')
+    document.body.classList.remove('bg-dark')
+  }
+  const toggleMode = (cls) => {
+    removeBodyClasses();
+    document.body.classList.add('bg-'+cls)
     if (mode === 'light') {
       setMode('dark');
       setBtnText('Disable Dark Mode')
@@ -44,16 +54,11 @@ function App() {
       //document.title = "TextUtils - Home";
     }
   }
-  const toggleMode1 = () => {
-    setMode('dark');
-    document.body.style.backgroundColor = '#827b63';
-    showAlert("Light mode has been enabled", "success ");
-  }
   return (
     <>
     <PreLoader/>
       <Router>
-        <Navbar title="TextUtils" about="AboutUtils" mode={mode} toggleMode={toggleMode} btnText={btnText} toggleMode1={toggleMode1} />
+        <Navbar title="TextUtils" about="AboutUtils" mode={mode} toggleMode={toggleMode} btnText={btnText} />
         <Alert alert={alert} />
         <div className="container my-3">
           <Switch>
